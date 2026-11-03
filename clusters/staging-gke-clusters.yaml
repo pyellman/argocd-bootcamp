@@ -1,10 +1,10 @@
 cluster:
   # try to match name in ArgoCD or planned name
-  name: staging
+  name: debian-k8s
   # for applicationset names generally
-  friendlyName: "staging"
+  friendlyName: "debian-k8s"
   # use https://kubernetes.default.svc for local argo
-  server: https://34.41.248.45
+  server: https://192.168.1.177:6443
 
 # themes for common and shared values
 themes:
