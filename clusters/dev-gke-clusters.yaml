@@ -3,9 +3,10 @@ cluster:
   # name: debian-k3s
   name: in-cluster
   # for applicationset names generally
+  # why does friendly name take precedence, appset go template should obey name: in-cluster
+  # friendlyName: "in-cluster"
   # friendlyName: "debian-k3s"
-  # why does friendly name matter
-  friendlyName: "in-cluster"
+  friendlyName: "whatever"
   # use https://kubernetes.default.svc for local argo
   server: https://kubernetes.default.svc
   # server: https://34.67.23.222
