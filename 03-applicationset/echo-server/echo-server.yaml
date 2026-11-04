@@ -39,7 +39,7 @@ spec:
         helm:
           releaseName: 'test'
           values: |
-            containerName: testing
+            containerName: echo-server
         path: 03-applicationset/echo-server/config/local-helm
       destination:
         #server: '{{ .cluster.server }}'
