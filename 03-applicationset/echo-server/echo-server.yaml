@@ -12,7 +12,7 @@ spec:
   - git:
       files:
       - path: clusters/*.yaml
-      repoURL: "https://github.com/SamPriyadarshi/argocd-bootcamp.git"
+      repoURL: "https://github.com/pyellman/argocd-bootcamp.git"
       revision: HEAD
     selector:
       matchLabels:
@@ -34,7 +34,7 @@ spec:
       project: default
       sources:
       # install argo-cd matching what we did with helm-ish...
-      - repoURL: "https://github.com/SamPriyadarshi/argocd-bootcamp.git"
+      - repoURL: "https://github.com/pyellman/argocd-bootcamp.git"
         targetRevision: HEAD
         helm:
           releaseName: 'test'

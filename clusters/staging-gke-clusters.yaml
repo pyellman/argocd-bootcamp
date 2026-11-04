@@ -1,5 +1,6 @@
 cluster:
   # try to match name in ArgoCD or planned name
+  # match name in applicationset spec?
   name: debian-k8s
   # for applicationset names generally
   friendlyName: "debian-k8s"
