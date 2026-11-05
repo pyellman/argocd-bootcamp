@@ -12,7 +12,6 @@ cluster:
   # server: https://34.67.23.222
   # use https://kubernetes.default.svc for my local argo, I didn't create a third cluster - PY
   server: https://kubernetes.default.svc
-
 # themes for common and shared values
 themes:
   environment: dev

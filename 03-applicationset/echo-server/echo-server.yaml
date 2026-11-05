@@ -14,9 +14,9 @@ spec:
       - path: clusters/*.yaml
       repoURL: "https://github.com/pyellman/argocd-bootcamp.git"
       revision: HEAD
-    selector:
-      matchLabels:
-        workloads.echo-server: "deployed"
+    # selector:
+    #   matchLabels:
+    #     workloads.echo-server: "deployed"
   template:
     metadata:
       # name the created applications
