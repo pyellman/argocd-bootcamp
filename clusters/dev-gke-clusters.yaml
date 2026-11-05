@@ -4,9 +4,9 @@ cluster:
   # cluster.name and cluster.server are direct alternatives, can use either in appset manifest
   # name: must match a cluster name in ArgoCD
   # name: dev
+  # if name: in-cluster, go-templating will generate an application name prefix "local"
   name: in-cluster
-  # for applicationset names generally (sic: nonsense, it _may_ be used when generating a prefix
-  # for the _application_ name by the go templating in the appset manifest if name not "in-cluster" - PY)
+  # for applicationset names generally (sic: nonsense, it is merely used to create a label for the appset - PY)
   friendlyName: "nothing"
   # friendlyName: "debian-k3s"
   # server: https://34.67.23.222
