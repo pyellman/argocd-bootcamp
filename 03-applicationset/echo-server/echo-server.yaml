@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   goTemplate: true
-  # no destination: provided for appset, will default to self (here argocd)...
+  # with no destination: provided for appset, will default to self (here argocd)...
   generators:
     # really only using this to match my .releaseName...
     # TODO: can this be combined with the helm values vs. 2 sources?
@@ -14,6 +14,7 @@ spec:
       - path: clusters/*.yaml
       repoURL: "https://github.com/pyellman/argocd-bootcamp.git"
       revision: HEAD
+    # this selector: doesn't seem to do anything, author must have had something in mind - PY
     # selector:
     #   matchLabels:
     #     workloads.echo-server: "deployed"
@@ -23,19 +24,19 @@ spec:
       name: 'echo-server-{{ if eq .cluster.name "in-cluster" }}local{{ else }}{{ .cluster.friendlyName }}{{ end }}'
       finalizers:
       - "resources-finalizer.argocd.argoproj.io"
-      # some labels for the applicationset
+      # add some labels to the generated applications
       labels:
         workloadType: demo
         # document what selectors are used
         environment: "{{ .themes.environment }}"
-        # how is this workload deployed in argocd?
+        # how this workload is deployed in argocd
         syncType: "helm-local"
         # for quick ref
         cluster: "{{ .cluster.friendlyName }}"
     spec:
       project: default
       sources:
-      # install argo-cd matching what we did with helm-ish...
+      # use an actual helm chart at this path, not a reference - PY
       - repoURL: "https://github.com/pyellman/argocd-bootcamp.git"
         targetRevision: HEAD
         helm:

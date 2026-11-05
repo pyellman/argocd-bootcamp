@@ -1,17 +1,15 @@
-# author had 3 clusters (dev, staging and in-cluster), I have two, in-cluster and debian-k8s,
-# so I point to in-cluster in this file
+# author had 3 clusters (dev, staging and in-cluster), I only have two, in-cluster and debian-k8s,
+# so I use my in-cluster (or https://kubernetes.default.svc) as a deploy target
 cluster:
   # cluster.name and cluster.server are direct alternatives, can use either in appset manifest
-  # name: must match a cluster name in ArgoCD
+  # name: must match an existing ArgoCD cluster name
   # name: dev
   # if name: in-cluster, go-templating will generate an application name prefix "local"
   name: in-cluster
-  # for applicationset names generally (sic: nonsense, it is merely used to create a label for the appset - PY)
+  # for applicationset names generally (sic: not true, this is used to create a label for the generated application - PY)
   friendlyName: "nothing"
-  # friendlyName: "debian-k3s"
   # server: https://34.67.23.222
-  # use https://kubernetes.default.svc for my local argo, I didn't create a third cluster - PY
-  server: https://kubernetes.default.svc
+  # server: https://kubernetes.default.svc # not used in application set
 # themes for common and shared values
 themes:
   environment: dev
