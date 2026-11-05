@@ -2,8 +2,8 @@
 cluster:
   # must match a cluster name in ArgoCD
   name: in-cluster
-  # for applicationset name prefix
-  # friendlyName: "in-cluster"
+  # for applicationset name prefix - this is totally wrong, author 
+  friendlyName: "in-cluster"
   # friendlyName: "debian-k3s"
   # In this cluster def I'll point to https://kubernetes.default.svc to deploy to my local argo, I didn't create a third cluster - PY
   server: https://kubernetes.default.svc
