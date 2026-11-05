@@ -7,7 +7,7 @@ cluster:
   name: in-cluster
   # for applicationset names generally (sic: nonsense, it _may_ be used when generating a prefix
   # for the _application_ name by the go templating in the appset manifest if name not "in-cluster" - PY)
-  friendlyName: "doesn't matter here, name: in-cluster takes precedence in go-templating of applicationset"
+  friendlyName: "nothing"
   # friendlyName: "debian-k3s"
   # server: https://34.67.23.222
   # use https://kubernetes.default.svc for my local argo, I didn't create a third cluster - PY

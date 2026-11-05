@@ -4,7 +4,8 @@ cluster:
   name: debian-k8s
   # for applicationset names generally (sic: nonsense, it _may_ be used when generating a prefix
   # for the _application_ name by the go templating in the appset manifest if name not "in-cluster" - PY)
-  friendlyName: "debian-k8s" # will be applied if name: not "in-cluster"
+  # will be applied if name: not "in-cluster"
+  friendlyName: "debian-k8s"
   # use https://kubernetes.default.svc for my local argo
   # server: https://192.168.1.177:6443 # not used in applicationset
 
