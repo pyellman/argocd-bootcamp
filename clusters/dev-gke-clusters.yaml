@@ -1,15 +1,12 @@
+# cluster.name and cluster.server are direct alternatives, can use either in appset manifest
 cluster:
-  # try to match name in ArgoCD or planned name
-  # name: debian-k3s
+  # must match a cluster name in ArgoCD
   name: in-cluster
-  # for applicationset names generally
-  # why does friendly name take precedence, appset go template should obey name: in-cluster
+  # for applicationset name prefix
   # friendlyName: "in-cluster"
   # friendlyName: "debian-k3s"
-  friendlyName: "whatever"
-  # use https://kubernetes.default.svc for local argo
+  # In this cluster def I'll point to https://kubernetes.default.svc to deploy to my local argo, I didn't create a third cluster - PY
   server: https://kubernetes.default.svc
-  # server: https://34.67.23.222
 
 # themes for common and shared values
 themes:

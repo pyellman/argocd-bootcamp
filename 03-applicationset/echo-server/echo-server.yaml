@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   goTemplate: true
-  # we default the destination to be itself...
+  # no destination: provided, will default destination to self (here argocd)...
   generators:
     # really only using this to match my .releaseName...
     # TODO: can this be combined with the helm values vs. 2 sources?
@@ -42,6 +42,7 @@ spec:
             containerName: echo-server
         path: 03-applicationset/echo-server/config/local-helm
       destination:
+        # could be server (address)
         #server: '{{ .cluster.server }}'
         name: '{{ .cluster.name }}'
         namespace: 'default'
