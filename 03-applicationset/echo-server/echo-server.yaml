@@ -43,7 +43,7 @@ spec:
         path: 03-applicationset/echo-server/config/local-helm
       destination:
         # could be server (address)
-        #server: '{{ .cluster.server }}'
+        # server: '{{ .cluster.server }}'
         name: '{{ .cluster.name }}'
         namespace: 'default'
       syncPolicy:

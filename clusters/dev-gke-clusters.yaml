@@ -11,8 +11,8 @@ cluster:
 # themes for common and shared values
 themes:
   environment: dev
-  #role: ci
-  #provider: baremetal|gke|aws
+  # role: ci
+  # provider: baremetal|gke|aws
   provider: gke
 # workloads opt-in as inventory
 workloads:
